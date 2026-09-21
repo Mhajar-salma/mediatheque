@@ -1,0 +1,17 @@
+{% extends 'gestion/base.html' %}
+{% block content %}
+<h1>Médias</h1>
+<p>
+    <a href="{% url 'livre_create' %}">Ajouter un livre</a> |
+    <a href="{% url 'dvd_create' %}">Ajouter un DVD</a> |
+    <a href="{% url 'cd_create' %}">Ajouter un CD</a> |
+    <a href="{% url 'jeu_create' %}">Ajouter un jeu de plateau</a>
+</p>
+<ul>
+    {% for media in medias %}
+    <li>{{ media.name }} - {{ media.disponible|yesno:"Disponible,Emprunté" }}</li>
+    {% empty %}
+    <li>Aucun média.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

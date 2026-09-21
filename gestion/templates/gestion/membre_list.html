@@ -1,0 +1,16 @@
+{% extends 'gestion/base.html' %}
+{% block content %}
+<h1>Membres</h1>
+<a href="{% url 'membre_create' %}">Ajouter un membre</a>
+<ul>
+    {% for membre in membres %}
+    <li>
+        {{ membre }}
+        <a href="{% url 'membre_update' membre.pk %}">Modifier</a>
+        <a href="{% url 'membre_delete' membre.pk %}">Supprimer</a>
+    </li>
+    {% empty %}
+    <li>Aucun membre.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

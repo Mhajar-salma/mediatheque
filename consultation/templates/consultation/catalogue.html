@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Catalogue</title>
+</head>
+<body>
+    <h1>Catalogue de la médiathèque</h1>
+    <h2>Livres, DVD et CD</h2>
+    <ul>
+        {% for media in medias %}
+        <li>{{ media.name }} - {{ media.disponible|yesno:"Disponible,Emprunté" }}</li>
+        {% empty %}
+        <li>Aucun média.</li>
+        {% endfor %}
+    </ul>
+    <h2>Jeux de plateau (consultation sur place)</h2>
+    <ul>
+        {% for jeu in jeux %}
+        <li>{{ jeu.name }}</li>
+        {% empty %}
+        <li>Aucun jeu.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

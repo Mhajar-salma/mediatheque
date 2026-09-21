@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Médiathèque</title>
+</head>
+<body>
+    <nav>
+        <a href="{% url 'membre_list' %}">Membres</a> |
+        <a href="{% url 'media_list' %}">Médias</a> |
+        <a href="{% url 'emprunt_list' %}">Emprunts</a>
+    </nav>
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+</html>

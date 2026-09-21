@@ -1,0 +1,154 @@
+[
+{
+  "model": "gestion.media",
+  "pk": 1,
+  "fields": {
+    "name": "people or not people",
+    "disponible": true
+  }
+},
+{
+  "model": "gestion.media",
+  "pk": 2,
+  "fields": {
+    "name": "Dune",
+    "disponible": false
+  }
+},
+{
+  "model": "gestion.media",
+  "pk": 3,
+  "fields": {
+    "name": "Le Petit Prince",
+    "disponible": false
+  }
+},
+{
+  "model": "gestion.media",
+  "pk": 4,
+  "fields": {
+    "name": "1984",
+    "disponible": true
+  }
+},
+{
+  "model": "gestion.media",
+  "pk": 5,
+  "fields": {
+    "name": "Inception",
+    "disponible": true
+  }
+},
+{
+  "model": "gestion.media",
+  "pk": 6,
+  "fields": {
+    "name": "Thriller",
+    "disponible": true
+  }
+},
+{
+  "model": "gestion.livre",
+  "pk": 1,
+  "fields": {
+    "auteur": "lauren weisberger"
+  }
+},
+{
+  "model": "gestion.livre",
+  "pk": 2,
+  "fields": {
+    "auteur": "Frank Herbert"
+  }
+},
+{
+  "model": "gestion.livre",
+  "pk": 3,
+  "fields": {
+    "auteur": "Antoine de Saint-Exupéry"
+  }
+},
+{
+  "model": "gestion.livre",
+  "pk": 4,
+  "fields": {
+    "auteur": "George Orwell"
+  }
+},
+{
+  "model": "gestion.dvd",
+  "pk": 5,
+  "fields": {
+    "realisateur": "Christopher Nolan"
+  }
+},
+{
+  "model": "gestion.cd",
+  "pk": 6,
+  "fields": {
+    "artiste": "Michael Jackson"
+  }
+},
+{
+  "model": "gestion.jeudeplateau",
+  "pk": 1,
+  "fields": {
+    "name": "Catan",
+    "createur": "Klaus Teuber"
+  }
+},
+{
+  "model": "gestion.jeudeplateau",
+  "pk": 2,
+  "fields": {
+    "name": "Carcassonne",
+    "createur": "Klaus-Jürgen Wrede"
+  }
+},
+{
+  "model": "gestion.membre",
+  "pk": 2,
+  "fields": {
+    "nom": "Dupont",
+    "prenom": "Marie"
+  }
+},
+{
+  "model": "gestion.membre",
+  "pk": 3,
+  "fields": {
+    "nom": "Martin",
+    "prenom": "Paul"
+  }
+},
+{
+  "model": "gestion.membre",
+  "pk": 4,
+  "fields": {
+    "nom": "Bernard",
+    "prenom": "Sophie"
+  }
+},
+{
+  "model": "gestion.emprunt",
+  "pk": 1,
+  "fields": {
+    "media": 2,
+    "membre": 2,
+    "date_emprunt": "2026-09-21",
+    "date_retour_prevue": "2026-09-28",
+    "date_retour_effective": null
+  }
+},
+{
+  "model": "gestion.emprunt",
+  "pk": 2,
+  "fields": {
+    "media": 3,
+    "membre": 3,
+    "date_emprunt": "2026-09-06",
+    "date_retour_prevue": "2026-09-13",
+    "date_retour_effective": null
+  }
+}
+]

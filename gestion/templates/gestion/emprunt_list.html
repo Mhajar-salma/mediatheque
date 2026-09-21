@@ -1,0 +1,24 @@
+{% extends 'gestion/base.html' %}
+{% block content %}
+<h1>Emprunts</h1>
+<a href="{% url 'emprunt_create' %}">Nouvel emprunt</a>
+<ul>
+    {% for emprunt in emprunts %}
+    <li>
+        {{ emprunt.media }} - {{ emprunt.membre }}
+        (à rendre avant le {{ emprunt.date_retour_prevue }})
+        {% if emprunt.date_retour_effective %}
+            - Rendu le {{ emprunt.date_retour_effective }}
+        {% else %}
+            {% if emprunt.est_en_retard %}- EN RETARD{% endif %}
+            <form method="post" action="{% url 'emprunt_retour' emprunt.pk %}" style="display:inline">
+                {% csrf_token %}
+                <button type="submit">Rentrer</button>
+            </form>
+        {% endif %}
+    </li>
+    {% empty %}
+    <li>Aucun emprunt.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
