@@ -38,3 +38,6 @@ Prérequis : Python 3.10+, Docker.
 7. `python manage.py loaddata donnees_test`
 8. `python manage.py runserver`
 9. Bibliothécaires : http://127.0.0.1:8000/bibliotheque/membres/ ; membres : http://127.0.0.1:8000/
+
+## 6. Limite connue
+Quand on supprime un membre, ses emprunts sont supprimés avec lui (`on_delete=CASCADE`), mais les médias encore empruntés ne repassent pas automatiquement en « Disponible ». Une amélioration possible serait de les remettre disponibles avant la suppression, ou d'interdire la suppression d'un membre qui a des emprunts en cours.
